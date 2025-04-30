@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Mall</title>
+</head>
+<body>
+    <P> Show Quantity</P>
+    <button onclick=" cartQuantity = cartQuantity + 1;
+    console.log(`cart quantity : ${cartQuantity}`)">add to cart</button>
+    <button onclick=" cartQuantity = cartQuantity + 1;
+    console.log(`cart quantity : ${cartQuantity}`)" >+1</button>
+    <button onclick=" cartQuantity = cartQuantity + 2;
+    console.log(`cart quantity : ${cartQuantity}`)">+2</button>
+    <button onclick=" cartQuantity = cartQuantity + 3;
+    console.log(`cart quantity : ${cartQuantity}`)">+3</button>
+    <button>reset cart</button>
+
+</body>
+<script>
+let cartQuantity = 0;
+ const  coffee = 5;
+ const  bagels = 5*2;
+ const  soup = 5;
+
+ let cost = coffee + bagels + soup;
+
+ console.log('$' +cost);
+    
+</script>
+</html>
