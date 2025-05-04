@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Mall</title>
+</head>
+
+<body>
+  <!-- <P> Show Quantity</P>
+    <button onclick=" cartQuantity = cartQuantity + 1;
+    console.log(`cart quantity : ${cartQuantity}`)">add to cart</button>
+    <button onclick=" cartQuantity = cartQuantity + 1;
+    console.log(`cart quantity : ${cartQuantity}`)" >+1</button>
+    <button onclick=" cartQuantity = cartQuantity + 2;
+    console.log(`cart quantity : ${cartQuantity}`)">+2</button>
+    <button onclick=" cartQuantity = cartQuantity + 3;
+    console.log(`cart quantity : ${cartQuantity}`)">+3</button>
+    <button>reset cart</button>  -->
+  <p>Rock paper scissors</p>
+  <button onclick=" 
+  letsPlay('Rock');
+    ">Rock</button>
+  <button onclick=" 
+  letsPlay('paper');
+  ">paper</button>
+  <button onclick=" 
+  letsPlay('scissors');
+  ">scissors</button>
+  <script>
+    let yourChoice = '';
+    function pickcomputerDodge() {
+      const randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerDodge = 'Rock';
+
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerDodge = 'paper';
+
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerDodge = 'scissors';
+      }
+      return computerDodge;
+
+
+    }
+
+    function letsPlay(yourChoice) {
+      const computerDodge = pickcomputerDodge();
+
+      let result = '';
+      if (yourChoice == 'scissors') {
+        if (computerDodge === 'Rock') {
+          result = 'you lose';
+        } else if (computerDodge === 'paper') {
+          result = 'you win';
+        } else if (computerDodge === 'scissors') {
+          result = 'Tie';
+        }
+        alert(`you picked ${yourChoice} . computer picked ${computerDodge}.${result}`)
+
+      } else if (yourChoice == 'paper') {
+        let result = '';
+        if (computerDodge === 'Rock') {
+          result = 'you win';
+        } else if (computerDodge === 'paper') {
+          result = 'you Tie';
+        } else if (computerDodge === 'scissors') {
+          result = 'you lose';
+        }
+        alert(`you picked ${yourChoice} . computer picked ${computerDodge}.${result}`)
+
+      } else if (yourChoice == 'Rock') {
+        let result = '';
+        if (computerDodge === 'Rock') {
+          result = 'Tie';
+        } else if (computerDodge === 'paper') {
+          result = 'you lose';
+        } else if (computerDodge === 'scissors') {
+          result = 'you win';
+        }
+        alert(`you picked ${yourChoice} . computer picked ${computerDodge}.${result}`)
+
+      }
+
+    }
+  </script>
+</body>
+
+<script>
+  //setting cart quantity
+  let cartQuantity = 0;
+  //simple arithmetic
+  //  const  coffee = 5;
+  //  const  bagels = 5*2;
+  //  const  soup = 5;
+
+  //  let cost = coffee + bagels + soup;
+
+  //  console.log('$' +cost);
+
+</script>
+<!-- // <p>Rock paper scissors</p>
+
+// <button onclick="playGame('rock')">Rock</button>
+// <button onclick="playGame('paper')">Paper</button>
+// <button onclick="playGame('scissors')">Scissors</button> -->
+
+
+<script>
+  //   function playGame(playerChoice) {
+  //     const randomNumber = Math.random();
+  //     let computerDodge = '';
+
+  //     if (randomNumber >= 0 && randomNumber < 1 / 3) {
+  //       computerDodge = 'Rock';
+  //     } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+  //       computerDodge = 'paper';
+  //     } else {
+  //       computerDodge = 'scissors';
+  //     }
+
+  //     console.log(computerDodge);
+
+  //     let result = '';
+
+  //     if (playerChoice === 'rock') {
+  //       if (computerDodge === 'Rock') result = 'Tie';
+  //       else if (computerDodge === 'paper') result = 'you lose';
+  //       else result = 'you win';
+  //     } else if (playerChoice === 'paper') {
+  //       if (computerDodge === 'Rock') result = 'you win';
+  //       else if (computerDodge === 'paper') result = 'Tie';
+  //       else result = 'you lose';
+  //     } else if (playerChoice === 'scissors') {
+  //       if (computerDodge === 'Rock') result = 'you lose';
+  //       else if (computerDodge === 'paper') result = 'you win';
+  //       else result = 'Tie';
+  //     }
+
+  //     alert(`you picked ${playerChoice}. computer picked ${computerDodge}. ${result}`);
+  //   } -->
+</script>
+
+
+</html>
