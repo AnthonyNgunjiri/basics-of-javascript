@@ -61,7 +61,56 @@ localStorage.setItem('message','hello')
   //     };
   //  }
 
-  //auto-boxing in javascript
+  //Auto-boxing in javascript
+   //DOES NOT WORK WITH NULL AND UNDEFINED
+ 
+console.log('hi'.length);
+console.log('hi'.toUpperCase);
+
+const object1 = {
+  message : 'hi'
+};
+
+//copy by reference
+const object2 = object1;
+
+object1.message = 'good work';
+console.log(object1);
+//we can't compare object directly
+
+const object3 = {
+  message:'good work'
+};
+//objects only compare references not values
+console.log(object3 === object1);//false
+console.log(object2 === object1);//true
+  const obbject4 ={
+    message: 'good work',
+    price: 100
+  };
+ // const message = obbject4;
+
+  //can destructure if the property value is the same
+ const {message,price} = obbject4;
+ console.log(message);
+ console.log(price); 
+
+ //shorthand method
+ const object5 = {
+  //message :message
+  message,
+  
+   method()
+{
+  console.log('method');
+  
+}  
+   //create the same object as above
+ };
+ console.log(object5);
+ object5.method();
+ 
+ 
  
 
  
