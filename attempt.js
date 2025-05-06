@@ -32,4 +32,36 @@ product.price = 120;
 
 console.log(product.price);
 
+//storing in localstorage
+
+//setting items
+localStorage.setItem('message','hello')
+
+//acessing the item stored
+ console.log(localStorage.getItem('message'));
+
+ //save the item as string in localstorage
+ localStorage.setItem('score',JSON.stringify(score))
+
+ //converting into object
+
+ console.log(JSON.parse(localStorage.getItem('score')));
+ 
+ // remove item from local storage
+   localStorage.removeItem('score')|| {
+    wins:0,
+    lossess:0,
+    ties:0
+   };
+
+  //   if(!score){
+  //     score = {wins:0,
+  //       losses:0,
+  //       ties :0
+  //     };
+  //  }
+
+  //auto-boxing in javascript
+ 
+
  
