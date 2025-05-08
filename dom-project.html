@@ -12,8 +12,10 @@
   "   class = "js-subscribe-button" 
 >Subscribe</button> 
   <h2>Rock paper Scissors</h2>
-  <li> Click here</li>
-
+<h3>Amazon calculator</h3>
+<input  class="cost-price" placeholder="cost of order">
+<button class="do-math" onclick="calculateTotal()">calculate</button>
+<p class="cost-total"></p>
 
   <script>
 function subscribe(){
@@ -23,6 +25,14 @@ function subscribe(){
         }else{
             buttonElement.innerHTML = 'subscribe';
         }
+
+}
+
+ function calculateTotal(){
+   const inputElement = document.querySelector('.cost-price');
+ let cost =  Number(inputElement.value);
+  cost <= 40 ? cost+= 10 : cost  
+  document.querySelector('.cost-total').innerHTML = `$ ${cost}`;
 
 }
   </script>
