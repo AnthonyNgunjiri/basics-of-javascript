@@ -10,6 +10,24 @@
 </head>
 <body>
     <p>lets learn javascript, shall we?</p>
+
+    <button>9a</button>
+    <button class="js-button">9b</button><br><br>
+    <button class="js-head" onclick="document.querySelector('.js-display').innerHTML = 'you chose head'">heads</button>
+    <button class="js-tails" onclick="document.querySelector('.js-display').innerHTML = 'you chose tails'">tails</button>
+    <p class="js-display"></p>
+
+    <span>
+      <input type="text" placeholder="name" class="js-input" onkeydown="  
+      document.querySelector('.js-input');
+const showKey= event.key;
+showKey==='Enter' && touchMe();
+
+        
+        "><button onclick=" touchMe() "
+      >submit</button>
+      <p class="js-name"></p>
+    </span>
     <!-- <script>
         let hours = 14;
 const Name = 'Tonie parker';
@@ -24,6 +42,13 @@ const Name = 'Tonie parker';
   }
     </script> -->
     <script>
+
+      function touchMe(){
+        const endPoint=document.querySelector('.js-input')
+        const glacierFlow = endPoint.value;
+        document.querySelector('.js-name').innerHTML=`your name is ${glacierFlow}`;
+        
+      }
         //working with default and guard operators
          
       //   let age = 74;
@@ -80,7 +105,7 @@ const Name = 'Tonie parker';
 // console.log("Least Price:", leastPrice); // should return 3000
 
 //     </script>
-//     <script>
+     <script>
 //question 2 
 //objects cannnot be compared directly, but 
 // can be destructured for property value comarison
@@ -107,11 +132,15 @@ const Name = 'Tonie parker';
 
 
 
-const sayHi = 'good morning';
-console.log(sayHi.toUpperCase());
-console.log(sayHi.repeat( 2))
+//console.log(sayHi.toUpperCase());
+//
+// console.log(sayHi.repeat( 2))
 
+//lessson 9 exercise- document object models
+// `you chose:${heads}  - you chose ${tails}`
 
+   
     </script>
+    
 </body>
 </html>

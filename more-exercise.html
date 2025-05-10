@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .section-1{
+            margin-top: 20px;
+            display: inline-block;
+            gap: 2rem;
+            background-color: black;
+            height: 40vh;
+            
+        } 
+    .btn-1{
+        background-color: rgb(240, 240, 240);
+        padding: 15px 10px;
+        margin-top: 20px;
+        border: 2px solid black;
+        
+    }
+    #btn-1{
+        background-color:rgb(255, 216, 20);
+        border-radius: 10px;
+        padding: 5px;
+        border-style: none;
+        
+    }
+    #btn-2{
+        background-color:rgb(0, 0, 0);
+        border-radius: 5px;
+        color: aliceblue;
+        padding: 5px;
+        text-transform: capitalize;
+        border-style: none;
+
+    }
+
+    .span-2{
+        background-color: rgb(240, 240, 240);
+        /* display:inline-block; */
+        padding: 15px 10px;
+        margin-top: 20px;
+        border: 2px solid black;
+
+
+
+    }
+    #btn-2-2{
+        text-transform: capitalize;
+        padding: 5px;
+        background-color: rgba(205, 193, 193, 0.783);
+        border-radius: 5px;
+        border-style: none;
+        font-weight: 400;
+        
+    }
+    #btn{
+        margin: 20px;
+        padding: 20px;
+    }
+    </style>
+    
+    <title>Practice Exercise</title>
+</head>
+<body>
+    <section class="section-1">
+    <span class="btn-1">
+        <button id="btn-1">Add to Cart</button>
+    </span>
+
+    <span class="span-2">
+        <button id="btn-2">request now</button>
+        <button id="btn-2-2">schedule for later</button>
+    </span>
+    <br><br>
+    <button class="js-button" id="btn">Test</button>
+    <script>
+         const search = document.querySelector('.js-button')
+         console.log(search.classList.contains('js-button'));
+        //  console.log(results);
+         
+    </script>
+ </section>
+</body>
+</html>
