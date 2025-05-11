@@ -59,6 +59,19 @@
         margin: 20px;
         padding: 20px;
     }
+    .js-switch{
+        background-color: rgb(0, 0, 0);
+        padding: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        border-radius: 5px;
+        color: rgb(240, 240, 240);
+    }
+     .isToggle{
+        background-color: red;
+        color:rgb(240, 240, 240);
+        font-weight: 600;
+     }
     </style>
     
     <title>Practice Exercise</title>
@@ -75,12 +88,23 @@
     </span>
     <br><br>
     <button class="js-button" id="btn">Test</button>
-    <script>
-         const search = document.querySelector('.js-button')
-         console.log(search.classList.contains('js-button'));
-        //  console.log(results);
-         
-    </script>
  </section>
+
+
+<button class="js-switch" onclick="switchClass()">OFF</button>
+
+<script>
+  function switchClass() {
+    const button = document.querySelector('.js-switch');
+
+    if (button.classList.contains('isToggle')) {
+      button.classList.remove('isToggle');
+      button.innerHTML = 'OFF';
+    } else {
+      button.classList.add('isToggle');
+      button.innerHTML = 'ON';
+    }
+  }
+</script>
 </body>
 </html>
