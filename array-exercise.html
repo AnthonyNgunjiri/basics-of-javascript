@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <input type="text" placeholder="add to list" class="input-to-list">
+    <!-- <input type="text" placeholder="add to list" class="input-to-list">
     <button onclick="addTodo()">Add</button>
     <div class="list-down"></div>
     <script>
@@ -39,9 +39,81 @@
             
         }
 
-        
+         -->
          
-    </script>
+   <!-- </script> -->
+    <h2>lesson 11 exercises</h2>
+
+ <script>
+// const arrNumbers = [10,20,30];
+//  arrNumbers[2]= 99;
+
+//  function getLastValue(array=[]){
+//  let item = array.length-1;
+//  let results = array[item];
+//  console.log(results);
+ 
+//  }
+//  getLastValue(['hello','fredrick',' hope you are doing good','yea, am okay dude']);
+// //reversing an array/swapping
+// function arraySwap(disArray = []) {
+//   if (disArray.length < 2) return disArray; // Nothing to swap
+
+//   const lastIndex = disArray.length - 1;
+
+//   // Swap first and last
+//   [disArray[0], disArray[lastIndex]] = [disArray[lastIndex], disArray[0]];
+
+//   return disArray;
+// 
+
+// const result = arraySwap(['hello bob', 'i like yu', 'its a pleasure to meet you']);
+// console.log(result); 
+  //working with loops
+  //for (let i = 0; i <= 10; i += 2) {
+  // console.log(i);
+    
+ // }
+
+//   let count = 0;
+//   while(count < 10){    
+//     count += 2;
+//     console.log(count);
+    
+//   }
+//    for (let index = 5; index >= 0; index = index--) {
+//     console.log(index);
+    
+//   }
+// let countdown = 5;
+//  while(countdown >= 0){
+//     console.log(countdown);
+//     countdown--;
+//  }
+   const makeArray = [1,2,3];
+   increaseOne = [];
+  for (let index = 0; index < makeArray.length; index++) {
+    const element = makeArray[index];
+    increaseOne.push(element + 1);
+    
+  }
+  console.log(increaseOne); 
+
+  let newArray = [];
+  function addOne(arrayOld = [-2,-1,0,99]) {
+
+   for (let i = 0; i < arrayOld.length; i++) {
+    const increment = arrayOld[i];
+    newArray.push(increment + 1);
+   }
+     
+  }
+  addOne();
+  console.log(newArray);
+  
+  
+  
+</script>
 </body>
 
 </html>
