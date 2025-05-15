@@ -45,8 +45,8 @@
     <h2>lesson 11 exercises</h2>
 
  <script>
-// const arrNumbers = [10,20,30];
-//  arrNumbers[2]= 99;
+// const arribers = [10,20,30];
+//  arribers[2]= 99;
 
 //  function getLastValue(array=[]){
 //  let item = array.length-1;
@@ -90,28 +90,80 @@
 //     console.log(countdown);
 //     countdown--;
 //  }
-   const makeArray = [1,2,3];
-   increaseOne = [];
-  for (let index = 0; index < makeArray.length; index++) {
-    const element = makeArray[index];
-    increaseOne.push(element + 1);
+//    const makeArray = [1,2,3];
+//    increaseOne = [];
+//   for (let index = 0; index < makeArray.length; index++) {
+//     const element = makeArray[index];
+//     increaseOne.push(element + 1);
     
-  }
-  console.log(increaseOne); 
+//   }
+//   console.log(increaseOne); 
 
-  let newArray = [];
-  function addOne(arrayOld = [-2,-1,0,99]) {
+//   let newArray = [];
+//   function addOne(arrayOld = [-2,-1,0,99]) {
 
-   for (let i = 0; i < arrayOld.length; i++) {
-    const increment = arrayOld[i];
-    newArray.push(increment + 1);
-   }
+//    for (let i = 0; i < arrayOld.length; i++) {
+//     const increment = arrayOld[i];
+//     newArray.push(increment + 1);
+//    }
      
+//   }
+//   addOne();
+//   console.log(newArray);
+  
+//   let newArray = [];
+// function addNum(array=[],num){
+//     for (let i = 0; i < array.length; i++) {
+//         let add = array[i];
+//          newArray.push(add + num);  
+//     }   
+// }
+// addNum([-2,-1,0,99],2);
+// console.log(newArray);
+
+let finalDictionary = [];
+
+const addArrays = (array1 = [], array2 = []) => {
+  const minLength = Math.min(array1.length, array2.length);
+  for (let i = 0; i < minLength; i++) {
+    finalDictionary.push(array1[i] + array2[i]);
   }
-  addOne();
-  console.log(newArray);
-  
-  
+};
+
+addArrays([1, 3, 3], [4, 5, 6]);
+console.log(finalDictionary);
+
+// let finalDictionary = [];
+
+// const addArrays = (array1 = [], array2 = []) => {
+//   for (let i = 0; i < array1.length; i++) {
+//     for (let j = 0; j < array2.length; j++) {
+//       finalDictionary.push(array1[i] + array2[j]);
+//     }
+//   }
+// };
+
+// addArrays([1, 3, 3], [4, 5, 6]);
+// console.log(finalDictionary);
+// Output: [5, 6, 7, 7, 8, 9, 7, 8, 9]
+let answer = 0;
+countPositive=(myArray=[])=>{
+  answer = myArray.filter(num=> num > 0).length;
+   
+}
+ countPositive([1,-3,5,4,5]);
+ console.log(answer);
+ 
+    
+
+
+
+
+
+
+
+
+
   
 </script>
 </body>
