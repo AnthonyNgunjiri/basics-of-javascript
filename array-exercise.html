@@ -146,24 +146,76 @@ console.log(finalDictionary);
 // addArrays([1, 3, 3], [4, 5, 6]);
 // console.log(finalDictionary);
 // Output: [5, 6, 7, 7, 8, 9, 7, 8, 9]
-let answer = 0;
-countPositive=(myArray=[])=>{
-  answer = myArray.filter(num=> num > 0).length;
+// let answer = 0;
+// countPositive=(myArray=[])=>{
+//   answer = myArray.filter(num=> num > 0).length;
    
-}
- countPositive([1,-3,5,4,5]);
- console.log(answer);
- 
-    
+// }
+//  countPositive([1,-3,5,4,5]);
+//  console.log(answer);
+//  let finals = { };
+//    minMax=(series=[])=>{
+
+//             if (series.length === 0) {
+//             finals = { min: null, max: null };
+//             return;
+//         }
+
+//                 if (series.length === 1) {
+//             finals = { min: series[0], max: series[0] };
+//             return;
+//         }
+//         let min=series[0];
+//         let max=series[0];
+
+//      for (let i = 1; i < series.length; i++) {
+//         let element = series[i];
+       
+//             if (element< min || min < 0) {
+//                 min= series[i];
+//             }
+//             if (element > max) {
+//                 max = series[i];
+//             }
+//             finals = {max,min};
+
+// series.re
+//        } 
 
 
+//    }
 
+//    minMax([1]);
+//    console.log(finals);
+   
 
+// let returnWords = {};
+//  const countWords=(words=[])=>{
+//     for( const str of words){
+//         returnWords[str]=(returnWords[str] || 0)  + 1;
+//       }
+// return returnWords;
+//  }
 
+// countWords(["apples","bananas","lemon","apples","lemon"])
+// console.log(returnWords);
 
+//removing repetitions
+// let refinedArray = {};
+// const removeRepetion=(wordsStrings=[])=>{
+//  refinedArray = [...new Set(wordsStrings)]
 
+// }
+// removeRepetion(["apples","bananas","lemon","apples","lemon"]);
+// console.log(refinedArray);
 
+//alternative with filter
+const myStringArray=["apples","bananas","lemon","apples","lemon"];
+  let removeRepetion= myStringArray.filter((value,index,self)=>{
+     return self.indexOf(value)=== index;
+      })
 
+  console.log(removeRepetion); 
   
 </script>
 </body>
