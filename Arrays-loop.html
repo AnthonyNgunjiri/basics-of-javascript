@@ -8,54 +8,208 @@
 </head>
 <body>
    <script>
-    const myArray = [10,20,30];
+//     const myArray = [10,20,30];
 
 
-    //looping through an array
+//     //looping through an array
 
-    const todoList = [
-        'make supper',
-        'wash dishes',
-        'do project'
-    ];
+//     const todoList = [
+//         'make supper',
+//         'wash dishes',
+//         'do project'
+//     ];
 
-     for(let index= 0; index<= todoList.length-1;index++){
-const value = todoList[index]
-        console.log(value);
+//      for(let index= 0; index<= todoList.length-1;index++){
+// const value = todoList[index]
+//         console.log(value);
         
-     }
+//      }
 
-     //shortcuts of looping through an array
-     //accumulator pattern
+//      //shortcuts of looping through an array
+//      //accumulator pattern
 
-     const num = [1,1,3];
-     let total = 0;//acummulator variable
-     //loop through the array
-      for(let i = 0; i< num.length;i++){
-        //use index to get each value
+//      const num = [1,1,3];
+//      let total = 0;//acummulator variable
+//      //loop through the array
+//       for(let i = 0; i< num.length;i++){
+//         //use index to get each value
 
-        const numb =num[i];
-        total += numb;
+//         const numb =num[i];
+//         total += numb;
 
         
-      }
-      console.log(total);
+//       }
+//       console.log(total);
 
 
-      //use the accumulator pattern
+//       //use the accumulator pattern
 
-      const numsDoubled = [];
-      for(let i = 0 ; i< num.length;i++){
-//get number at each index
- const numb = num[i];
-//add number to an array
-numsDoubled.push(numb * 2)
-}
-console.log(numsDoubled);
+//       const numsDoubled = [];
+//       for(let i = 0 ; i< num.length;i++){
+// //get number at each index
+//  const numb = num[i];
+// //add number to an array
+// numsDoubled.push(numb * 2)
+// }
+// console.log(numsDoubled);
 
-
+// //continue,skip a single iteration
+// //break,end  the loop early
+// for(let k=1;k<10;K++){
+//   if(K % 3===0){
+//     continue;
+//   }
+//   if(k===8){
+//     break;
+//   }
+//   console.log(k);
+  
+// }
       
+// let i = 1;
+// //skip numbers btwn 0 and 10 that are divible by 3
+// while(i < 10){
+//   if(i % 3 === 0){
+//     i++;
+//     continue;
+//   }
+//   console.log(i);
+  
+// }
 
-   </script> 
-</body>
-</html>
+
+// const stringArray = ["hello", "world", "search", "lovely"];
+// const index = stringArray.indexOf("search");
+// console.log(index); // will print index or -1 if not found
+
+ //return the first match
+//  const stringArray = ["hello", "search", "world", "search", "lovely"];
+// let found = false;
+
+// for (let i = 0; i < stringArray.length; i++) {
+//   if (stringArray[i] === "search") {
+//     console.log(i); // Index of the first "search"
+//     found = true;
+//     break; // Stop after first match
+//   }
+// }
+
+// if (!found) {
+//   console.log(-1); // If "search" wasn't found at all
+// }
+//  function removeEgg(foods) {
+//     let newArray = [];
+//     let eggFound = false;
+//     let eggCount = 0;
+
+//     for (let i = 0; i < foods.length; i++) {
+//         if (foods[i] === "egg") {
+//             eggFound = true;
+//             eggCount++;
+//             if(eggCount<=2){
+//             continue; // skip adding "egg"
+//         }
+//       }
+//         newArray.push(foods[i]); // add other items
+//     }
+
+//     // If no egg was found, add one at the end
+//     if (!eggFound) {
+//         newArray.push("egg");
+//     }
+
+//     console.log(newArray);
+// }
+
+// removeEgg(["pilau","egg","egg","chicken","egg",]);
+// //console.log(newArray);
+
+// //this the reverse
+// function removeLastTwoEggs(foods) {
+//     let newArray = [];
+//     let reversed = [...foods].reverse(); // make a reversed copy
+//     let eggRemoved = 0;
+//     let eggFound = false;
+
+//     for (let i = 0; i < reversed.length; i++) {
+//         let item = reversed[i];
+
+//         if (item === "egg") {
+//             eggFound = true;
+//             if (eggRemoved < 2) {
+//                 eggRemoved++;
+//                 continue; // skip the last two eggs
+//             }
+//         }
+
+//         newArray.push(item);
+//     }
+
+//     // Reverse it back to correct order
+//     newArray.reverse();
+
+//     // If no "egg" was found at all, add one
+//     if (!eggFound) {
+//         newArray.push("egg");
+//     }
+
+//     console.log(newArray);
+// }
+//  //working with slice to create a coppyof the original array
+// function removeLastTwoEggs(foods) {
+//     let newArray = [];
+//     let reversed = foods.slice().reverse(); // create a shallow copy and reverse
+//     let eggRemoved = 0;
+//     let eggFound = false;
+
+//     for (let i = 0; i < reversed.length; i++) {
+//         let item = reversed[i];
+
+//         if (item === "egg") {
+//             eggFound = true;
+//             if (eggRemoved < 2) {
+//                 eggRemoved++;
+//                 continue; // skip the last two "egg" items
+//             }
+//         }
+
+//         newArray.push(item);
+//     }
+
+//     newArray.reverse(); // restore original order
+
+//     if (!eggFound) {
+//         newArray.push("egg"); // add one "egg" if none was found
+//     }
+
+//     console.log(newArray);
+// }
+// for (let i = 0; i <=20; i++) {
+//  if (i % 3 ===0 && i % 5===0) {
+//     console.log('fizzBuzz');
+    
+//  } else if (i % 3===0) {
+//     console.log('fizz');
+    
+//  } else if( i % 5===0) {
+//    console.log('Buzz') ;
+//  } 
+//     const serial =[];
+//     serial.
+//     console.log(i);
+    
+// }
+function unique(arrayOfstring){
+    // let uniqueValue = [...new Set(arrayOfstring)];
+    // console.log(uniqueValue);
+    const uniqueValue = arrayOfstring.filter((value,index,self)=> self.indexOf(value)=== index);
+     console.log(uniqueValue);
+
+}
+ unique(["green","blue","red","green","blue"]);
+
+
+    </script> 
+ 
+      </body>
+ </html>
