@@ -31,8 +31,11 @@
         ]
        function renderTodolist(){
             let todoLists = '';
-            for (let i = 0; i < todoList.length; i++) {
-                const todoObject = todoList[i];
+            //looping through an array using forEach
+            todoList.forEach(function(todoObject,i){
+
+            // for (let i = 0; i < todoList.length; i++) {
+            //     const todoObject = todoList[i];
                 const{name,dueDate}=todoObject;
                 const html =
                    `<div class = "do-list-down">
@@ -41,7 +44,8 @@
                     <button class="delete-btn">Delete</button>
                     </div>`;
                 todoLists += html;
-            }
+           // }
+            })
             document.querySelector('.list-down').innerHTML=todoLists;
 
             document.querySelectorAll('.delete-btn').forEach((deleteBtn,index)=>{

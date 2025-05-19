@@ -35,6 +35,8 @@
  localStorage.removeItem('score')
 
   "  >Reset score</button>
+
+  <button class="js-autoplay" onclick=" autoPlay()">Auto play</button>
   <p class="js-moves"></p>
   <p class="js-results">results</p>
   <p class="js-score">score</p>
@@ -114,6 +116,20 @@
     function updateScore() {
       document.querySelector('.js-score').innerHTML = `Wins:${score.Wins},Losses:${score.Losses},Ties:${score.Ties}`
 
+    }
+let autoPlaying = false;
+let intervalId;
+    function autoPlay(params) {
+      if(!autoPlaying){
+      intervalId =  setInterval(function() {
+          const  yourChoice = pickcomputerDodge();
+        letsPlay(yourChoice);
+        }, 1000);
+        autoPlaying = true;
+      } else{
+        clearInterval(intervalId);
+        autoPlay=false;
+      }
     }
   </script>
 </body>
