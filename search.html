@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >my world</title>
+</head>
+<body>
+   <!-- <button class="press-me" onclick=" 
+   let counter = 0;
+   let first = setInterval(function() {
+         document.querySelector('.press-me').innerHTML = 'finished!';
+      if (counter < 1 ) {
+         document.querySelector('.press-me').innerHTML = 'loading...!';
+      }
+      counter++;
+   }, 1000);
+    ">Do your work</button>  -->
+    <button class="press-down">Add to cart</button>
+<p class="display-msg"></p>
+
+<script>
+//   document.addEventListener('DOMContentLoaded', () => {
+//     document.querySelector('.press-down').addEventListener('click', () => {
+//       const displayMsg = document.querySelector('.display-msg');
+      
+//       // Set message after 2 seconds
+//       setTimeout(() => {
+//         displayMsg.innerHTML = 'Added';
+
+//         // Clear message 2 seconds after it's added
+//         setTimeout(() => {
+//           displayMsg.innerHTML = '';
+//         }, 2000);
+        
+//       }, 2000);
+//     });
+//   });
+
+  const titles = ['App', 'Hero', 'Jackie'];
+  let index = 0;
+
+  const intervalId = setInterval(() => {
+    if(index < 2){
+    document.title = titles[index];
+    index++;
+//index >=titles.length
+     } else{
+      clearInterval(intervalId); // Stop after showing all titles
+    }
+  }, 2000); // Every 2 seconds
+</script>
+
+</body>
+</html>
