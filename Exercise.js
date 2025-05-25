@@ -60,19 +60,52 @@
 
 // removeEgg(['egg', 'royco', 'corriador', 'cuspicus']);
 // Turn this into a new array where all items are uppercase
-let items = ["bread", "milk", "egg"];
- let newItems = items.map(value=> value.toUpperCase());
- console.log(newItems);
- // Return the sum of only the even numbers in this array
- let sum = 0;
- nums = [1, 2, 3, 4, 5, 6];
-for (let i = 0; i < nums.length; i++) {
-  let element = nums[i];
-  if( element % 2===0 ){
-    sum += element;
-   // sum.push(element);
-    console.log(sum);
-  }
-}
+// let items = ["bread", "milk", "egg"];
+//  let newItems = items.map(value=> value.toUpperCase());
+//  console.log(newItems);
+//  // Return the sum of only the even numbers in this array
+//  let sum = 0;
+//  nums = [1, 2, 3, 4, 5, 6];
+// for (let i = 0; i < nums.length; i++) {
+//   let element = nums[i];
+//   if( element % 2===0 ){
+//     sum += element;
+//    // sum.push(element);
+//   }
+  
+// }
+// console.log(sum);
+// // Given an array of numbers, return a new array with only the square of odd numbers
+// let squared = [];
+// let oldArrray = (numbers = [1, 2, 3, 4, 5]) =>{
+// let squaredNumbers = numbers.filter(nums=>nums % 2 !== 0).map(acc=>acc*acc);
+// console.log(squaredNumbers);
+// for (let i = 0; i < numbers.length; i++) {
+//   const element = numbers[i];
 
+//   if(element % 2 !== 0 ){
+// squared.push(element * element);
+// console.log(squared);
+
+ // }
+  
+// }
+// }
+// oldArrray();
+
+//filter,square and sum
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+//filter odd numbers
+// const oddNumbers = numbers
+// .filter(nums =>nums % 2 !==0)
+// .map(num => num * num)
+// .reduce((acc,val)=>acc + val);
+//  console.log(oddNumbers);
+
+//  const multiply = (a, b) => {
+//   const product = a * b;
+//   console.log(product);
+  
+// };
+// multiply(2,3);
  
