@@ -108,4 +108,110 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
   
 // };
 // multiply(2,3);
- 
+ //first quiz
+// const user ={
+// name:'kelly hudson',
+// email:'kel@gmail.com',
+// isloggedIn:'kelly is logged in '
+// };
+// console.log(
+
+// user.email
+// );
+// //2nd quiz
+//  const items = [product1={
+//   name:'Gucci',
+//   category:'clothings',
+//   price: '$'+ 250
+//  },
+//  product2={
+//   name:'canned meat',
+//   category:'food',
+//   price: '$'+ 50
+//  },
+//  product3={
+//   name:'toaster',
+//   category:'electronic',
+//   price: '$'+ 2500
+//  }
+// ]
+// .map((items)=>{
+// console.log(
+//   `The product name is ${items.name} and their price ${items.price} `
+// );
+
+// })
+
+// const items = [
+//   {
+//     name: 'Gucci',
+//     category: 'clothings',
+//     price: '$' + 250
+//   },
+//   {
+//     name: 'canned meat',
+//     category: 'food',
+//     price: '$' + 50
+//   },
+//   {
+//     name: 'toaster',
+//     category: 'electronic',
+//     price: '$' + 2500
+//   }
+// ];
+
+// // 1. Add a new product
+// items.push({
+//   name: 'mattress',
+//   category: 'beddings',
+//   price: '$' + 3000
+// });
+
+// // 2. Update price of toaster
+// items.forEach(product => {
+//   if (product.name === 'toaster') {
+//     product.price = '$' + 3000;
+//   }
+// });
+
+// // 3. Remove Gucci item
+// const updatedItems = items.filter(
+//   product =>
+//     !(product.name === 'Gucci' && product.category === 'clothings' && product.price === '$250')
+// );
+
+// // 4. Log the result
+// console.log(updatedItems);
+let products = [
+  { id: 1, name: "Laptop", category: "electronics", price: 1000 },
+  { id: 2, name: "T-shirt", category: "clothing", price: 30 },
+  { id: 3, name: "Bread", category: "food", price: 2 }
+];
+
+// Add a product
+function addProduct(product) {
+  products.push(product);
+}
+
+// Update product by ID
+function updateProduct(id, updatedProduct) {
+  products = products.map(p => p.id === id ? { ...p, ...updatedProduct } : p);
+}
+
+// Delete product by ID
+function deleteProduct(id) {
+  products = products.filter(p => p.id !== id);
+}
+
+// List products
+function listProducts() {
+  console.log("Product List:");
+  products.forEach(p =>
+    console.log(`${p.id}: ${p.name} - ${p.category} - $${p.price}`)
+  );
+}
+addProduct({ id: 4, name: "Shoes", category: "clothing", price: 60 });
+updateProduct(2, { price: 35 });
+deleteProduct(1);
+listProducts();
+

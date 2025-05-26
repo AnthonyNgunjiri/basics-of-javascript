@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Counter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #count {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Counter App</h1>
+  <div id="count">0</div>
+  <button id="decrement">–</button>
+  <button id="increment">+</button>
+
+  <script>
+    // Get DOM elements
+    const countEl = document.getElementById('count');
+    const incrementBtn = document.getElementById('increment');
+    const decrementBtn = document.getElementById('decrement');
+
+    let count = 0;
+
+    // Event listeners
+    incrementBtn.addEventListener('click', () => {
+      count++;
+      countEl.textContent = count;
+    });
+
+    decrementBtn.addEventListener('click', () => {
+      count--;
+      countEl.textContent = count;
+    });
+
+
+  </script>
+
+       
+</body>
+</html>

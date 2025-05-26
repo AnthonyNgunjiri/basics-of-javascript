@@ -9,12 +9,80 @@
 <body>
  <div class="product-item"></div>
  <script>
-    const item = {
-        name:'socks',
-        brand:'Athletic cotton',
-        rate: 3
-    };
-    document.querySelector(".product-item").innerHTML =item;
+    // const item = {
+    //     name:'socks',
+    //     brand:'Athletic cotton',
+    //     rate: 3
+    // };
+    // document.querySelector(".product-item").innerHTML =item;
+
+ let cart = [];
+ let products = [
+  { id: 1, name: "Laptop", category: "electronics", price: 1000 },
+  { id: 2, name: "T-shirt", category: "clothing", price: 30 },
+  { id: 3, name: "Bread", category: "food", price: 2 }
+];
+
+// Add product to cart by ID
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (product) {
+    cart.push(product);
+    console.log(`${product.name} added to cart.`);
+  } else {
+    console.log(`Product with ID ${productId} not found.`);
+  }
+}
+
+// Remove from cart by ID
+function removeFromCart(productId) {
+  cart = cart.filter(p => p.id !== productId);
+  console.log(`Product with ID ${productId} removed from cart.`);
+}
+
+// View cart items
+function viewCart() {
+  console.log("Cart Items:");
+  cart.forEach(item =>
+    console.log(`${item.name} - ${item.category} - $${item.price}`)
+  );
+}
+
+// Checkout and get total
+function checkout() {
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  console.log(`\n🧾 Checkout Total: $${total}`);
+}
+function filterByCategory(category) {
+  const filtered = products.filter(
+    (product) => product.category === category
+  );
+  console.log(`Products in ${category}:`, filtered);
+}
+
+// Try this
+filterByCategory("food");
+filterByCategory("electronics");
+function searchByName(keyword) {
+  const results = products.filter((product) =>
+    product.name.toLowerCase().includes(keyword.toLowerCase())
+  );
+  console.log(`Search results for "${keyword}":`, results);
+}
+
+// Try this
+searchByName("meat");
+searchByName("so");
+
+addToCart(2);
+addToCart(3);
+viewCart();
+removeFromCart(2);
+viewCart();
+checkout();
+
+
+
  </script>  
 </body>
 </html>
