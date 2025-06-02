@@ -12,15 +12,39 @@
       text-decoration: line-through;
       color: gray;
     }
+    p{
+      text-decoration: dotted;
+      color: brown;
+    }
+
   </style>
 </head>
 <body>
   <h1>My To-Do List</h1>
   <input type="text" id="taskInput" placeholder="Add a new task" />
-  <button id="addBtn">Add</button>
+  <button class="addBtn">Add</button>
 
-  <ul id="taskList"></ul>
+  <div id="taskList"></div>
 
-  <script src="app.js"></script>
+  <script src=""></script>
+  <script> 
+ const write = document.getElementById("taskInput");
+ const press = document.querySelector(".addBtn");
+const tasklist = document.getElementById('taskList')
+ press.addEventListener('click',()=>{
+  //evnt.preventDefault();
+  const writeDown = write.value.trim();
+  const writings = document.createElement('p')
+writings.textContent = writeDown;
+tasklist.appendChild(writings);
+write.value = '';
+ writings.addEventListener('contextmenu',(e)=>{
+  e.preventDefault();
+  tasklist.removeChild(writings);
+
+}) 
+ });
+
+  </script>
 </body>
 </html>
