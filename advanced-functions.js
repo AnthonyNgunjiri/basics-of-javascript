@@ -43,5 +43,5 @@ return value + 10;//mapping transforms an array into another array based on the 
  //more shortcuts
   console.log([1,2,3].map(value=>value + 2));
 
-  //a closure ,if a function have acess to a value , it will always have access to that value
+  //a closure ,if a function have access to a value , it will always have access to that value
   //note, funtions are values ,forEach,filter,map is an array method

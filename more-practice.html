@@ -8,6 +8,7 @@
       font-family: sans-serif;
       padding: 20px;
     }
+
     li.completed {
       text-decoration: line-through;
       color: gray;
@@ -44,6 +45,53 @@ write.value = '';
 
 }) 
  });
+ const user = {
+  name: 'Anthony',
+};
+
+function sayHi(age) {
+  console.log(`${this.name} is ${age} years old.`);
+}
+
+sayHi.call(user, 23); // Anthony is 23 years old
+sayHi.apply(user, [23]); // Same as call, but takes an array
+const boundFunc = sayHi.bind(user);
+boundFunc(23); // Also works later
+
+//prototypes
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
+
+Car.prototype.describe = function () {
+  return `${this.make} ${this.model}`;
+};
+
+const myCar = new Car("Toyota", "Corolla");
+console.log(myCar.describe()); // Toyota Corolla
+//inhertiance using prototype
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.speak = function () {
+  console.log(`${this.name} makes a sound`);
+};
+
+function Dog(name) {
+  Animal.call(this, name);
+}
+
+Dog.prototype = Object.create(Animal.prototype); // 🔗 Inherit from Animal
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.bark = function () {
+  console.log(`${this.name} barks`);
+};
+
+const rex = new Dog("Rex");
+rex.speak(); // Rex makes a sound
+rex.bark();  // Rex barks
 
   </script>
 </body>
